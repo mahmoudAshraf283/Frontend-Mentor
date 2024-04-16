@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,*::after,*::before{
+ box-sizing: inherit;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/bg-mobile.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.main{
+    width: min(100%, 900px);
+    margin-inline: auto;
+    margin-top: 100px;
+}
+
+.first{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 10px 100px 10px 10px;
+    background-color: hsl(228, 56%, 26%);
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.icons svg {
+    margin: 5px;
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+    align-self: center;
+}
+
+.one{
+    padding: 13px 15.4px;
+}
+.two{
+    padding: 15.4px 13px;
+}
+.three{
+    padding: 17px 13px;
+}
+
+.second{
+    border-radius: 10px;
+    background-color: hsl(228, 56%, 26%);
+    padding: 1.5rem; 
+    text-align: center;
+    margin: 1rem;
+}
+
+.second p{
+    color: hsl(243, 100%, 93%);
+    
+}
+
+.container{
+    background-color:  rgba(12, 18, 44 , 0.5);
+    border-radius: 10px;
+    height: 20px;
+    display: flex;
+}
+
+.bar{
+    height: 14px;
+    background: linear-gradient(to right ,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    border-radius: 10px;
+    width: 81.5%;
+    align-self: center;
+    display: flex;
+    margin-left: 2px;
+}
+
+.circle{
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 10px;
+    margin-left: calc(100% - 14px);
+    align-self: center;
+}
+
+span{
+    font-weight: 700;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.block {
+    color: hsl(229, 7%, 55%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    margin-inline: auto;
+    text-align: center;
+    margin-top: -55px;
+}
+
+.block span {
+    color: hsl(229, 57%, 11%);
+    font-size: 3rem;
+    padding: 10px;
+}
+
+.desktop{
+    display: none;
+}
+
+@media (min-width : 900px) {
+    body{
+        background-image: url(images/bg-desktop.png);
+        width: 100vw;
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+    }
+    .first{
+        width: 40%;
+    }
+    .second{
+        width: 60%;
+        text-align: left;
+    }
+
+    .mobile{
+        display: none;
+    }
+    
+    .desktop{
+        display: block;
+        width: 40%;
+        margin: 0 60%;
+        margin-top: -70px;
+        border-radius: 10px 10px 0 10px;
+    }
+    
+    .polygon{
+        background-color: white;
+        border-radius:0;
+        width: 2rem;
+        height: 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        float: right;
+        margin-right: 0.5px;
+        margin-top: -45px;
+    }
+    
+}
